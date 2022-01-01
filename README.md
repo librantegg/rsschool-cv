@@ -1,1 +1,1 @@
-# rsschool-cv
+https://librantegg.github.io/rsschool-cv/cv
