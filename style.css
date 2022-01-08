@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+ .container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: rgb(53, 49, 49);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.header {
+    background-color: rgb(145, 125, 235);
+
+}
+
+.nav-list {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    font-weight: 300;
+    
+   
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    
+    position: relative;
+    padding: 0 12px;
+    text-decoration: none;
+    color: rgb(16, 16, 17);
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    height: 2px;
+    background-color: #fff;
+    width: calc(100% - 24px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes slidein {
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% - 24px);
+    }
+  }
